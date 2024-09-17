@@ -16,7 +16,7 @@
       "dest": "/app.js"
     },
     {
-      "src": "/docs/(.*)",
+      "src": "/(.*)",
       "dest": "/docs/index.html"
     }
   ]
