@@ -16,11 +16,11 @@ app.use(express.json());
 app.use('/api/notes', notesRoutes);
 app.use('/api/auth', authRoutes);
 
-// app.use(express.static(path.join(__dirname, 'docs')));
+app.use(express.static(path.join(__dirname, 'docs')));
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'docs', 'index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'docs', 'index.html'));
+});
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGODB_URI)
