@@ -17,7 +17,7 @@ app.use('/api/notes', notesRoutes);
 app.use('/api/auth', authRoutes);
 
 // Root route untuk redirect ke /docs
-app.get('/', express.static(path.join(__dirname, '/')));
+app.get('/', express.static(path.join(__dirname, 'index.html')));
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGODB_URI)
