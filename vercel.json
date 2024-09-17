@@ -1,14 +1,23 @@
 {
-  "public": "docs",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
   "version": 2,
   "builds": [
     {
       "src": "app.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "docs/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/docs/(.*)",
+      "dest": "/docs/index.html"
     }
   ]
 }
-  
