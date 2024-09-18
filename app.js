@@ -25,7 +25,7 @@ const corsOptions = {
 };
 
 const allowAllCors = {
-  origin: ['http://localhost:3000','http://localhost:3002', '76.76.21.22:443'],
+  origin: '*',
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
