@@ -1,6 +1,6 @@
 # Kalbe Nutritionals Notes API
 
-> API untuk menyimpan catatan pribadi secara online. Digunakan untuk latihan kelas Sanghiang Perkasa IT Academy.
+> API untuk menyimpan catatan pribadi secara online. Digunakan untuk latihan kelas React, Sanghiang Perkasa IT Academy.
 
 ## Endpoint
 http://notes-api-knacademy.vercel.app/api
@@ -12,7 +12,7 @@ http://notes-api-knacademy.vercel.app/api
 - Method
     - `POST`
 - Request Body
-    - `name` as `string`
+    - `username` as `string`
     - `email` as `string`, must be unique
     - `password` as `string`, must be at least 6 characters
 - Response

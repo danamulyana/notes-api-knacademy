@@ -1,6 +1,6 @@
 # Kalbe Nutritionals Notes API
 
-> API untuk menyimpan catatan pribadi secara online. Digunakan untuk latihan kelas React Sanghiang Perkasa IT Academy.
+> API untuk menyimpan catatan pribadi secara online. Digunakan untuk latihan kelas React, Sanghiang Perkasa IT Academy.
 
 ## Endpoint
 http://notes-api-knacademy.vercel.app/api
