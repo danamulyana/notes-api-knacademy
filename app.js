@@ -24,8 +24,17 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 
+const allowAllCors = {
+  origin: '*',
+  optionsSuccessStatus: 200,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}
+
 // Middleware
-app.use(cors(corsOptions));
+app.use(cors(allowAllCors));
+app.options('*', cors(allowAllCors)); 
 app.use(express.json());
 
 // Routes
