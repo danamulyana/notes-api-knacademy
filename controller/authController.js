@@ -25,6 +25,18 @@ exports.register = async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
+    if (typeof username !== 'string' || username.trim() === '') {
+      return res.status(400).json({ message: 'Username is required and must be a string' });
+    }
+  
+    if (typeof password !== 'string') {
+      return res.status(400).json({ message: 'Password must be a string' });
+    }
+  
+    if (password.length < 6) {
+      return res.status(400).json({ message: 'Password must be at least 6 characters' });
+    }
+
     // Create user
     const newUser = await User.create({
       username,
