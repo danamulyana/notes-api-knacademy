@@ -32,6 +32,7 @@ const allowAllCors = {
   credentials: true
 }
 
+
 // Middleware
 app.use(cors(allowAllCors));
 app.options('*', cors(allowAllCors)); 
