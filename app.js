@@ -37,6 +37,19 @@ app.use(cors(allowAllCors));
 app.options('*', cors(allowAllCors)); 
 app.use(express.json());
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Update this for production
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end(); // Handle preflight request
+  }
+
+  next();
+});
+
 // Routes
 app.use('/api/notes', notesRoutes);
 app.use('/api/auth', authRoutes);
