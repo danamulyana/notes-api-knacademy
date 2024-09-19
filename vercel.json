@@ -5,7 +5,13 @@
             "src": "docs/**",
             "use": "@vercel/static"
         },
-        { "src": "app.js", "use": "@vercel/node" }
+        { 
+            "src": "app.js", 
+            "use": "@vercel/node" ,
+            "config": {
+                "maxDuration": 60
+            }
+        }
     ],
     "routes": [
         {
