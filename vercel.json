@@ -14,12 +14,16 @@
             "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
             "headers": {
                 "Access-Control-Allow-Origin": "*"
-            },
-            "maxDuration": 60
+            }
         },
         {
             "src": "/",
             "dest": "docs/index.html"
         }
-    ]
+    ],
+    "functions": {
+        "app.js": {
+            "maxDuration": 60
+        }
+    }
 }
