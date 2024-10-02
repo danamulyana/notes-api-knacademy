@@ -35,7 +35,7 @@ const allowAllCors = {
 
 // Middleware
 app.use(cors(allowAllCors));
-app.options('*', cors(allowAllCors)); 
+// app.options('*', cors(allowAllCors)); 
 app.use(express.json());
 
 app.use((req, res, next) => {
